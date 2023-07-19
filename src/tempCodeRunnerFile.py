@@ -1,0 +1,1 @@
+self.eye_display['image'] = self.player_eye_tk
