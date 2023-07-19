@@ -6,7 +6,9 @@
 - Added Copy Buttons for each of the Seeds. Added Clear Buttons for each of the seed Text widgets
 
 ## What's this?
-Project_Xs is a program that aims recover the internal state of Pokemon BDSPs Xorshift random number generator via observation of player/pokemon random blinks.
+- Project_Xs is a program that aims recover the internal state of Pokemon BDSPs Xorshift random number generator via observation of player/pokemon random blinks.
+- Original Project: https://github.com/niart120/Project_Xs
+- Additional Credit to: https://github.com/Lincoln-LM/Project_Xs
 
 ## Environment
  - Git 2.34.1 (Latest version)
