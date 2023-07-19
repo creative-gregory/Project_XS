@@ -17,7 +17,7 @@
 ## How to run
 Run the following commands to download the repository and run the gui script.
 ```
-git clone https://github.com/Lincoln-LM/Project_Xs.git # Clone the repo with git
+git clone https://github.com/creative-gregory/Project_Xs.git # Clone the repo with git
 cd ./Project_Xs # Enter the folder for the repository
 pip install -r requirements.txt # Install the pip requirements
 python ./src/player_blink_gui.py # Run the gui script
@@ -95,7 +95,7 @@ OpenCV 4.5.4
 
 一部分からない場合はgoogle先生に聞いてください
 ```
-git clone https://github.com/Lincoln-LM/Project_Xs.git
+git clone https://github.com/creative-gregory/Project_Xs.git
 cd ./Project_Xs
 pip install -r requirements.txt
 python ./src/player_blink_gui.py
