@@ -1,7 +1,14 @@
 # Project_Xs
 
+## What's New?
+- Ease of use changes added to player_blink_gui.py. 
+- Made the label that the eye image was populated static, to halt the odd resizing error. 
+- Added Copy Buttons for each of the Seeds. Added Clear Buttons for each of the seed Text widgets
+
 ## What's this?
-Project_Xs is a program that aims recover the internal state of Pokemon BDSPs Xorshift random number generator via observation of player/pokemon random blinks.
+- Project_Xs is a program that aims recover the internal state of Pokemon BDSPs Xorshift random number generator via observation of player/pokemon random blinks.
+- Original Project: https://github.com/niart120/Project_Xs
+- Additional Credit to: https://github.com/Lincoln-LM/Project_Xs
 
 ## Environment
  - Git 2.34.1 (Latest version)
@@ -10,7 +17,7 @@ Project_Xs is a program that aims recover the internal state of Pokemon BDSPs Xo
 ## How to run
 Run the following commands to download the repository and run the gui script.
 ```
-git clone https://github.com/Lincoln-LM/Project_Xs.git # Clone the repo with git
+git clone https://github.com/creative-gregory/Project_Xs.git # Clone the repo with git
 cd ./Project_Xs # Enter the folder for the repository
 pip install -r requirements.txt # Install the pip requirements
 python ./src/player_blink_gui.py # Run the gui script
@@ -88,7 +95,7 @@ OpenCV 4.5.4
 
 一部分からない場合はgoogle先生に聞いてください
 ```
-git clone https://github.com/Lincoln-LM/Project_Xs.git
+git clone https://github.com/creative-gregory/Project_Xs.git
 cd ./Project_Xs
 pip install -r requirements.txt
 python ./src/player_blink_gui.py
