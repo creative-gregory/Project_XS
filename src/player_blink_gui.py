@@ -91,8 +91,11 @@ class PlayerBlinkGUI(tk.Frame):
     def clear_text_widget(self, text_widget, button_list):
         text_widget.delete('1.0', 'end')
 
-        for button in button_list:
-            button['bg'], button['fg'] = "SystemButtonFace", "Black"
+        style = ttk.Style()
+        style.configure('clear_copy.TButton',background='white',foreground='black') # default color
+
+        for copy_button in button_list:
+            copy_button.configure(style="clear_copy.TButton")
 
     def append_to_clipboard(self, text_to_append):
         root.clipboard_clear()
@@ -114,7 +117,9 @@ class PlayerBlinkGUI(tk.Frame):
 
                 self.append_to_clipboard(final_seed)
 
-            button_widget['bg'], button_widget['fg'] = "#6CD300", "black"
+            style = ttk.Style()
+            style.configure('copy_approved.TButton',background='green',foreground='green')
+            button_widget.configure(style="copy_approved.TButton")
             # print(rf"S{seed_to_copy} - Copied to Clipboard: {final_seed}")
 
         else:
@@ -256,34 +261,34 @@ class PlayerBlinkGUI(tk.Frame):
 
         self.s0_1_2_3 = tk.Text(self,width=10, height=4)
         self.s0_1_2_3.grid(column=1,row=1,rowspan=4)
-
-        self.s0_1_2_3_copy_0 = tk.Button(self, text="Copy S0", width=10, height=1, compound="center", padx=0, pady=0, command=lambda: self.copy_seed_to_clipboard("0", self.s0_1_2_3, self.s0_1_2_3_copy_0))
+        
+        self.s0_1_2_3_copy_0 = ttk.Button(self, text="Copy S0", width=10, compound="center", command=lambda: self.copy_seed_to_clipboard("0", self.s0_1_2_3, self.s0_1_2_3_copy_0))
         self.s0_1_2_3_copy_0.grid(column=0, row=2)
 
-        self.s0_1_2_3_copy_1 = tk.Button(self, text="Copy S1", width=10, height=1, compound="center", padx=0, pady=0, command=lambda: self.copy_seed_to_clipboard("1", self.s0_1_2_3, self.s0_1_2_3_copy_1))
+        self.s0_1_2_3_copy_1 = ttk.Button(self, text="Copy S1", width=10, compound="center", command=lambda: self.copy_seed_to_clipboard("1", self.s0_1_2_3, self.s0_1_2_3_copy_1))
         self.s0_1_2_3_copy_1.grid(column=0, row=3)  
 
-        self.s0_1_2_3_copy_2 = tk.Button(self, text="Copy S2", width=10, height=1, compound="center", padx=0, pady=0, command=lambda: self.copy_seed_to_clipboard("2", self.s0_1_2_3, self.s0_1_2_3_copy_2))
+        self.s0_1_2_3_copy_2 = ttk.Button(self, text="Copy S2", width=10, compound="center", command=lambda: self.copy_seed_to_clipboard("2", self.s0_1_2_3, self.s0_1_2_3_copy_2))
         self.s0_1_2_3_copy_2.grid(column=0, row=4)
 
-        self.s0_1_2_3_copy_3 = tk.Button(self, text="Copy S3", width=10, height=1, compound="center", padx=0, pady=0, command=lambda: self.copy_seed_to_clipboard("3", self.s0_1_2_3, self.s0_1_2_3_copy_3))
+        self.s0_1_2_3_copy_3 = ttk.Button(self, text="Copy S3", width=10, compound="center", command=lambda: self.copy_seed_to_clipboard("3", self.s0_1_2_3, self.s0_1_2_3_copy_3))
         self.s0_1_2_3_copy_3.grid(column=0, row=5)
 
         self.s0_3_button_list = [self.s0_1_2_3_copy_0, self.s0_1_2_3_copy_1, self.s0_1_2_3_copy_2, self.s0_1_2_3_copy_3]
-        self.clear_s0_1_2_3 = tk.Button(self, text="Clear S[0-3]", width=10, height=1, compound="center", padx=0, pady=0, command=lambda: self.clear_text_widget(self.s0_1_2_3, self.s0_3_button_list))
+        self.clear_s0_1_2_3 = ttk.Button(self, text="Clear S[0-3]", width=10, compound="center", command=lambda: self.clear_text_widget(self.s0_1_2_3, self.s0_3_button_list))
         self.clear_s0_1_2_3.grid(column=1,row=5)
 
         self.s01_23 = tk.Text(self, width=20, height=2)
         self.s01_23.grid(column=1,row=6,rowspan=4)
 
-        self.s01_23_copy_01 = tk.Button(self, text="Copy S0", width=10, height=1, compound="center", padx=0, pady=0, command=lambda: self.copy_seed_to_clipboard("01", self.s0_1_2_3, self.s01_23_copy_01))
+        self.s01_23_copy_01 = ttk.Button(self, text="Copy S0", width=10, compound="center", command=lambda: self.copy_seed_to_clipboard("01", self.s0_1_2_3, self.s01_23_copy_01))
         self.s01_23_copy_01.grid(column=0,row=7,rowspan=1)
 
-        self.s01_23_copy_23 = tk.Button(self, text="Copy S1", width=10, height=1, compound="center", padx=0, pady=0, command=lambda: self.copy_seed_to_clipboard("23", self.s0_1_2_3, self.s01_23_copy_23))
+        self.s01_23_copy_23 = ttk.Button(self, text="Copy S1", width=10, compound="center", command=lambda: self.copy_seed_to_clipboard("23", self.s0_1_2_3, self.s01_23_copy_23))
         self.s01_23_copy_23.grid(column=0,row=8,rowspan=1)
 
         self.s0_1_button_list = [self.s01_23_copy_01, self.s01_23_copy_23]
-        self.clear_s01_23 = tk.Button(self, text="Clear S[0-1]", width=10, height=1, compound="center", padx=0, pady=0, command=lambda: self.clear_text_widget(self.s01_23, self.s0_1_button_list))
+        self.clear_s01_23 = ttk.Button(self, text="Clear S[0-1]", width=10, compound="center", command=lambda: self.clear_text_widget(self.s01_23, self.s0_1_button_list))
         self.clear_s01_23.grid(column=1,row=9)
 
         self.advances = 0
