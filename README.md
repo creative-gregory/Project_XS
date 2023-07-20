@@ -3,7 +3,9 @@
 ## What's New?
 - Ease of use changes added to player_blink_gui.py. 
 - Made the label that the eye image was populated static, to halt the odd resizing error. 
-- Added Copy Buttons for each of the Seeds. Added Clear Buttons for each of the seed Text widgets
+- Added Copy Buttons for each of the Seeds.
+- Copy Buttons are highlighted once copied.
+- Added Clear Buttons for each of the seed Text widgets.
 
 ## What's this?
 - Project_Xs is a program that aims recover the internal state of Pokemon BDSPs Xorshift random number generator via observation of player/pokemon random blinks.
